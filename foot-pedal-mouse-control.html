@@ -1,0 +1,90 @@
+<h1>Sending Mouse Clicks with Feet</h1>
+
+<!-- <h2>Introduction & Purpose</h2> -->
+<p>This is a 3 pedel foot switch I constructed to perform mouse clicks with my feet.</p>
+<p>This project is part of an overall effort for hands-free computer accessibility.
+    See the 'head tracking'(link tbd) project for the other half of the hands-free mouse control.
+    Also see the 'emulating keyboard with voice commands'(link tbd) project.</p>
+<!-- <p>- "Using CAD with feet...see part one for head tracking.</p> -->
+
+
+<!-- - link to code -->
+<img src="img\PXL_20230814_230428572.jpg" alt="FootMouse Internal Circuitboard" width="500" height="375">
+<img src="img\PXL_20230814_230827610.jpg" alt="FootMouse Mounting" width="500" height="375">
+<img src="img\PXL_20230814_230544640.NIGHT.jpg" alt="Foot Pedal Setup" width="500" height="375">
+
+<p>Link to Arduino code: <a href="https://github.com/georgekuegler/foot-mouse">GitHub Repository</a></p>
+<!-- - pictures
+    - top-down picture of the internal circuit board
+    - picture of the peddleboard & pedal connections
+    -  -->
+<p>If you're coming from the 'head tracking' project, now we need a way to press the mouse buttons with our feet.
+    One option is voice commands, but that is simply too slow.
+    Another option is a wonderful product called 'Smyle Mouse'. It's aimed at people with a range of disabilities and
+    motor function. Smyle Mouse uses facial recognition to track your head moving to via your eyebrows and lips. It had
+    excellent smoothing as it was aimed at people with a range of motor functions.</p>
+
+<p>I needed the speed & precision only a physical button press could provide.
+    So, I turned to my feet.</p>
+
+<!-- ## The First Prototype
+[picture of prototype][picture of cheap pedal]
+
+I started with the foot pedal that came with my electric piano.  -->
+
+<h2>Components & Design</h2>
+<!-- (annotated picture pointing to everything & #'ed) -->
+<!-- brief explanation why i chose each component -->
+
+<ul>
+    <li>Teensy 4.0</li>
+    <li>Yamaha FC5 Sustain Foot Switch</li>
+    <li>(3) 1/4" TS Female Jacks</li>
+    <li>Proto-Board</li>
+    <li>(3) 10Kohmn Resistors</li>
+    <li>Plastic Enclosure</li>
+    <li>Various wire, solder, & standoffs</li>
+</ul>
+<h2>Teensy 4.0</h2>
+<p>I chose the <a href="https://www.pjrc.com/store/teensy40.html">Teensy 4.0</a> as my microcontroller.
+    With a 32-bit ARM Cortex-M7 CPU running at 600MHz, this board is a bit overkill for the scope of the project.
+    However, the community is very active and Paul Stoffregen had insured solid libraries are available.</p>
+
+<p>Reasons I chose the Teensy 4.0:</p>
+<ul>
+    <li>Native USB support for keyboard, mouse, & serial</li>
+    <li>Arduino compatible & IDE support</li>
+    <li>Triggerable bootloader from USB</li>
+    <li>Compact form factor</li>
+    <li>Plenty of processor speed and gpio pins for future expansion</li>
+    <li>Great community support</li>
+</ul>
+<p>Flashing over USB was important to me. The Teensy boards support flashing without needing to physically press the
+    reset button. I can keep the board installed into an enclosure and update the firmware without removing any covers.
+</p>
+
+<p>The Arduino IDE makes it easy to compile and flash hardware out-of-the-box. Configuring compiler options is
+    straightforward in the UI as well.</p>
+
+<h2>Yamaha FC5 Sustain Foot Switch</h2>
+<p>I knew I needed a tough foot switch, something I could use with shoes, as I'd be using this in a public office.
+    I was skeptical about existing USB mouse buttons I found on the market.</p>
+<p>The Yamaha FC5 Sustain Foot Switch had the qualiies I was looking for:</p>
+<ul>
+    <li>Robust</li>
+    <li>Inexpensive</li>
+    <li>Removeable Grips</li>
+</ul>
+<!-- 
+# Challenges & Highlights
+- what problems was i trying to solve?
+  - match speed and precision of an index finger mouseclick
+  - make sure feet don't get tired
+- how did i solve the problems I intended to solve?
+  - rigid body and rigid mounting improve mouse feel and increase speed
+  - inverted click operation keeps feet from getting tired
+- what unexpectedly clever solutions came about? (the reverse pedal click)
+  - see above
+- include a picture of the original?
+# Schematics & Appendix
+- circuit diagram (roughly arranged in the shape of the breadboard layout) -->
