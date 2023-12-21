@@ -1,7 +1,8 @@
 html {
     background-color: #000000;
     color: #eeeeee;
-    width: 75%;
+    /* width: 75%; */
+    max-width: 60em;
     /* border: #FFFFFF 1px solid; */
     /* 
     * If (2) values are specified for 'margin' or 'padding',
