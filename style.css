@@ -1,0 +1,74 @@
+html {
+    background-color: #000000;
+    color: #eeeeee;
+    width: 75%;
+    /* border: #FFFFFF 1px solid; */
+    /* 
+    * If (2) values are specified for 'margin' or 'padding',
+    * then the (2) parameters refer to
+    * 'top-and-bottom' and 'left-and-right'.
+    * 
+    * If margin-top or margin-bottom are 'auto',
+    * their value is set to 0.
+    */
+    margin: 0 auto;
+    padding: 1%;
+}
+
+.image-container {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.imgbox {
+    margin: 6px;
+}
+
+.center-fit {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+
+.img-single-div {
+    text-align: center;
+    margin: 48px 0px;
+}
+
+.img-1st-prototype {
+    width: 50%;
+}
+
+p {
+    text-wrap: wrap;
+}
+
+td {
+    padding: 3pt;
+    text-align: center;
+}
+
+p.blue {
+    color: blue;
+}
+
+.family {
+    color: rgba(255, 0, 0, 0.25);
+    /* font-variant: small-caps; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.italic {
+    color: rgb(from green 5 0 50);
+    font-style: italic;
+}
+
+.shadowbox {
+    width: 15em;
+    border: 1px solid #333;
+    box-shadow: 8px 8px 5px #444;
+    padding: 8px 12px;
+    background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+    color: #000000;
+}
